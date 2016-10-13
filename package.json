@@ -1,0 +1,45 @@
+{
+  "version": "0.1.0",
+  "name": "primer-page-headers",
+  "description": "Jumbotrons, heroes, and featured content sections for marketing websites at GitHub.",
+  "homepage": "http://primercss.io/",
+  "author": "GitHub, Inc.",
+  "license": "MIT",
+  "style": "build/build.css",
+  "files": [
+    "index.scss",
+    "lib",
+    "build"
+  ],
+  "repository": "https://github.com/primer/primer-page-headers.git",
+  "bugs": {
+    "url": "https://github.com/primer/primer-page-headers/issues"
+  },
+  "scripts": {
+    "setup": "if [ ! -d \"node_modules\" ]; then npm install; fi",
+    "build": "node-sass index.scss --include-path node_modules --output-style compressed | postcss -c .postcss.json -o build/build.css",
+    "prepublish": "npm run setup && npm run build",
+    "test": "stylelint **/*.scss -c .stylelintrc.json -s scss"
+  },
+  "dependencies": {
+    "primer-support": "*",
+    "primer-marketing-support": "*"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "node-sass": "^3.7.0",
+    "postcss-cli": "^2.5.2",
+    "stylelint": "^6.6.0",
+    "stylelint-config-primer": "^1.0.0"
+  },
+  "keywords": [
+    "css",
+    "flash",
+    "github",
+    "hero",
+    "jumbotron",
+    "primer",
+    "primercss",
+    "style"
+  ]
+}
