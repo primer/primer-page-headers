@@ -9,16 +9,10 @@ This repository is a module of the full [primer-css][primer] repository.
 
 ## Documentation
 
-You can read more about page headers in the [docs][docs].
-
-
 <!-- %docs
 title: Page headers
-homepage: https://github.com/primer/primer-page-headers
 status: In review
 -->
-
-### Page Headers
 
 Documentation & refactor coming very soon
 
