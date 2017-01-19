@@ -1,11 +1,12 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "name": "primer-page-headers",
   "description": "Jumbotrons, heroes, and featured content sections for marketing websites at GitHub.",
   "homepage": "http://primercss.io/",
   "author": "GitHub, Inc.",
   "license": "MIT",
   "style": "build/build.css",
+  "main": "build/index.js",
   "files": [
     "index.scss",
     "lib",
@@ -16,21 +17,18 @@
     "url": "https://github.com/primer/primer-page-headers/issues"
   },
   "scripts": {
-    "setup": "if [ ! -d \"node_modules\" ]; then npm install; fi",
-    "build": "node-sass index.scss --include-path node_modules --output-style compressed | postcss -c .postcss.json -o build/build.css",
-    "prepublish": "npm run setup && npm run build",
-    "test": "stylelint **/*.scss -c .stylelintrc.json -s scss"
+    "build": "primer-module-build index.scss",
+    "prepublish": "npm run build",
+    "test": "npm run build && stylelint **/*.scss -c .stylelintrc.json -s scss"
   },
   "dependencies": {
     "primer-support": "*",
     "primer-marketing-support": "*"
   },
   "devDependencies": {
-    "autoprefixer": "^6.3.6",
-    "node-sass": "^3.7.0",
-    "postcss-cli": "^2.5.2",
-    "stylelint": "^6.6.0",
-    "stylelint-config-primer": "^1.0.0"
+    "stylelint": "*",
+    "stylelint-config-primer": "*",
+    "primer-module-build": "*"
   },
   "keywords": [
     "css",
